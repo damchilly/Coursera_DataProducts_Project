@@ -12,7 +12,7 @@ shinyUI(pageWithSidebar(
                 label = "Pizza diameter (inches):",
                 min = 0, max = 20, value = c(0)),
     numericInput('tomate', 'Tomate sauce cups', 0, min=0, max=5, step=1),
-    numericInput('cheese', 'Cheese cups', 0, min=0, max=5, step=1),
+    numericInput('cheese', 'Cheese slices', 0, min=0, max=20, step=1),
     numericInput('pepperoni', 'Pepperoni slices', 0, min=0, max=20, step=4),
     numericInput('others', 'Peppers/Mushrooms/Olives (tbsp)', 0, min=0, max=10, step=1)
   ),

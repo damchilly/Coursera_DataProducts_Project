@@ -2,20 +2,15 @@
 # SKINNY PIZZA
 
 crustCals <- 0
-totalCals <- function (s,t,ch,p,o) (s*50)+(t*60)+(ch*120)+(p*25)+(o*20)
-# skinnyTest <- function (s,t,ch,p,o) { 
-#                         skinnylevel <- (s*50)+(t*60)+(ch*120)+(p*25)+(o*20)
-#                         if skinnylevel >= 2000 return "This is not skinny!!!"
-#                         else return "Enjoy your pizza!"
-#}
+totalCals <- function (s,t,ch,p,o) (s*15)+(t*70)+(ch*75)+(p*10)+(o*10)
 
 shinyServer(
   function(input,output) {
-    crustCals <- reactive({as.numeric(input$size)*10})
-    tomatoCals <- reactive({as.numeric(input$tomate)*60})
-    cheeseCals <- reactive({as.numeric(input$cheese)*120})
-    pepperoniCals <- reactive({as.numeric(input$pepperoni)*25})
-    othersCals <- reactive({as.numeric(input$others)*20})
+    crustCals <- reactive({as.numeric(input$size)*15})
+    tomatoCals <- reactive({as.numeric(input$tomate)*70})
+    cheeseCals <- reactive({as.numeric(input$cheese)*75})
+    pepperoniCals <- reactive({as.numeric(input$pepperoni)*10})
+    othersCals <- reactive({as.numeric(input$others)*10})
     output$oid0 <- renderPrint({crustCals()})
     output$oid1 <- renderPrint({tomatoCals()})
     output$oid2 <- renderPrint({cheeseCals()})
